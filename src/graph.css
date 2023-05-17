@@ -1,0 +1,21 @@
+.graph-box {
+    border: #2c2c2f 2px solid;
+     margin: auto;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* change justify-content to flex-start */
+    align-items: center;
+    width: calc(100% - 40px); /* subtract 40px from the width */
+    padding-left:  25px; /* reduce the padding on the left and right to 20px */
+}
+
+.icon-row img {
+    margin-right: 10px; /* reduce the margin between the icons */
+}

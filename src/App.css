@@ -1,0 +1,334 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("bgimg/suny.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  color: whitesmoke;
+  flex-direction: column;
+}
+
+.location {
+  padding-top: 12px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.temp {
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.conditions {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hourly {
+  /* transparent-box,gray,under text */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 30%;
+  overflow-x: scroll;
+  font-size: 12px;
+  text-align: center;
+}
+
+tr {
+  overflow-x: scroll;
+}
+
+/* no scroll bar */
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(137, 137, 137, 0.5);
+  outline: none;
+}
+
+.line {
+  border: 1px solid rgba(137, 137, 137, 0.3);
+  margin: 0 10px;
+}
+.line_stick {
+  /*make-it-stick*/
+  position: sticky;
+  top: 0;
+  text-align: left;
+
+}
+
+.line_text {
+  /*make-it-stick*/
+  padding-left: 10px;
+  text-align: left;
+}
+
+.tenday {
+  /* transparent-box,gray,under text */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  width: 90%;
+  height: 30%;
+  font-size: 14px;
+  border-collapse: collapse;
+  overflow: scroll;
+  max-width: 350px;
+  flex-direction: row;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+
+}
+
+.tenday::-webkit-scrollbar {
+  display: none;
+}
+
+.tdtext {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.cal-img {
+  /*/make-it-smaller*/
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  /*mke-it-aligned-with-text*/
+  vertical-align: text-bottom;
+}
+
+.icon {
+  position: relative;
+  padding: 5px;
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  /*centered*/
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 13px;
+}
+
+.temp-range {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  width: 70px;
+  height: 5px;
+  border-radius: 10px;
+  vertical-align: text-bottom;
+  margin: 32px 15px 32px;
+}
+
+.min-temp {
+  color: rgba(151, 151, 151, 0.7);
+}
+
+#min-grad {
+  background: linear-gradient(to left, #50ff0d, #008cff);
+}
+
+@media only screen and (max-width: 500px) {
+  .App-header {
+    align-items: center;
+    align-content: center;
+  }
+  .hourly {
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.black-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  width: 90%;
+  height: 30%;
+  font-size: 14px;
+  max-width: 350px;
+  /*next-to-the-tenday*/
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 500px) {
+  .tp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+  }
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 300px;
+}
+
+.aqi-grad {
+  /* Create a linear gradient from green to yellow to red */
+  background: linear-gradient(
+    to right,
+    rgb(71, 230, 14),
+    rgb(250, 255, 41),
+    rgb(240, 133, 16),
+    rgb(255, 0, 0),
+    rgb(135, 58, 192),
+    rgb(131, 33, 47),
+    rgb(131, 33, 47),
+    rgb(131, 33, 47)
+  );
+  padding: 0;
+  width: 320px;
+  height: 5px;
+  border-radius: 10px;
+  vertical-align: text-bottom;
+  margin: 32px 15px 15px;
+}
+
+.aqi-text {
+  color: white;
+  margin: 0 15px;
+  overflow: auto;
+  text-align: left;
+}
+.aqi-image {
+  /*/make-it-smaller*/
+  width: 20px;
+  height: auto;
+  float: left;
+  margin: 10px;
+  /*mke-it-aligned-with-text*/
+  vertical-align: text-bottom;
+}
+.aqi-circ {
+  /*white-circle*/
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
+
+.square-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  border-radius: 10px;
+  padding-left: 10px;
+  width: 40%;
+  height: 25%;
+  max-width: 350px;
+  /*next-to-the-tenday*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.uv-grad {
+  background: linear-gradient(
+    to right,
+    rgb(71, 230, 14),
+    rgb(250, 255, 41),
+    rgb(240, 133, 16),
+    rgb(255, 0, 0),
+    rgb(156, 70, 227)
+  );
+  padding: 0;
+  width: 90%;
+  height: 5px;
+  border-radius: 10px;
+  vertical-align: text-bottom;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.square-box#sun {
+  height: 165px;
+}
+
+.sun-grad {
+  background: linear-gradient(to right, black 5%, white, black);
+  padding: 0;
+  width: 90%;
+  height: 5px;
+  border-radius: 10px;
+  margin: 5px 5px 5px 0;
+}
+
+.wind-circ {
+  display: flex;
+  width: 130px;
+  height: 130px;
+  border: 2px dotted black;
+  border-radius: 50%;
+  background-color: rgba(51, 51, 51, 0);
+  align-items: center;
+  padding: 0;
+  margin: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.wind-img {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wind-mph {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wind-mph#metric {
+  margin: 0;
+  padding: 0;
+}
+
+.tr_tenday {
+  /* make the pointer a hand */
+  cursor: pointer;
+}
+
+.tr_tenday:active {
+  color: rgba(151, 151, 151, 0.7);
+}
+
